@@ -14,6 +14,7 @@ const Navbar = () => {
         mt: { sm: '32px', xs: '20px' },
         justifyContent: 'none',
       }}
+      px="20px"
     >
       <Link to="/">
         <img
