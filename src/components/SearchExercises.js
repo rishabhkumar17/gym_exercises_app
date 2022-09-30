@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
 
-import { exerciseOptions, fetchData } from '../../utils/fetchData'
+import { exerciseOptions, fetchData } from '../utils/fetchData'
 import HorizontalScrollBar from './HorizontalScrollBar'
 
 const SearchExercises = () => {
@@ -27,7 +27,7 @@ const SearchExercises = () => {
         'https://exercisedb.p.rapidapi.com/exercises/bodyPartList',
         exerciseOptions
       )
-      console.log(exercisesData)
+
       const searchedExercises = exercisesData.filter(
         (exercise) =>
           exercise.name.toLowerCase().includes(search) ||
