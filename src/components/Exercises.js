@@ -6,7 +6,7 @@ import ExerciseCard from './ExerciseCard'
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1)
-  const exercisesPerPage = 9
+  const [exercisesPerPage] = useState(9)
 
   const indexOfLastExercise = currentPage * exercisesPerPage
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage
@@ -33,7 +33,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         )
       } else {
         exercisesData = await fetchData(
-          `https://exercisedb.p.rapidapi.com/bodyPart/${bodyPart}`,
+          `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
           exerciseOptions
         )
       }
