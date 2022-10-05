@@ -21,7 +21,14 @@ const Footer = () => {
         textAlign="center"
         pb="40px"
       >
-        Made with ❤️ by Rishabh
+        Made with ❤️ by{' '}
+        <a
+          href="https://github.com/rishabhkumar17"
+          target="_blank"
+          style={{ color: '#000', textDecoration: 'none', fontWeight: 'bold' }}
+        >
+          Rishabh
+        </a>
       </Typography>
     </Box>
   )
